@@ -10,7 +10,7 @@ gulp.task('default', [], function() {
   return gulp.src(SCRIPT_SRC)
     .pipe(sourcemaps.init())
     .pipe(angularFilesort())
-      .pipe(uglify({compress: {drop_debugger: false}}))
+      //.pipe(uglify({compress: {drop_debugger: false}}))
       .pipe(concat('script.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(''));
