@@ -20,7 +20,9 @@
     };
 
     function getFromLocalStorage() {
-      if (!isLocalStorageAvailable()) { return []; }
+      if (!isLocalStorageAvailable() || !window.localStorage.todoItems) {
+        return [];
+      }
       return JSON.parse(window.localStorage.todoItems);
     }
 
