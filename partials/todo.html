@@ -1,0 +1,12 @@
+
+  <h1>{{ name }}'s Todo list {{ 4 + 2 }}</h1>
+  <a href='#/stats'>Stats</a>
+  <ul>
+    <li ng-repeat='item in getItems() track by $index'>
+      {{ item }}
+      <span ng-click='removeItem(item)'>
+        &times;
+      </span>
+    </li>
+  </ul>
+  <add-item-form></add-item-form>
